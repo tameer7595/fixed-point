@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fixed_point.dir/main.cpp.o CMakeFiles/fixed_point.dir/fixed_point.cpp.o CMakeFiles/fixed_point.dir/test.cpp.o  -o fixed_point 
