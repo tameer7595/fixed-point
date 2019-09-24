@@ -6,9 +6,9 @@
 #include "fixed_point.h"
 using std::cout;
 void Test ::test_fixed_point(){
-    FixedPoint temp(30,14);
+    Price<int>temp(30,14,4);
 
-    FixedPoint temp1(23,15);
+    Price<int> temp1(23,15 , 4);
     cout<<"sum of : "<< temp << " + " << temp1 << " is :";
     temp = temp + temp1;
     cout << temp << std::endl;
@@ -18,7 +18,25 @@ void Test ::test_fixed_point(){
     else
         cout << temp<<" and " << temp1<<" are not  equals"<<std ::endl;
 
-    cout<<temp1<<" - "<<temp <<"is"<<std::endl;
-    temp1 -= temp;
-    cout<<temp;
+    cout<<temp1<<" - "<<temp <<" is : ";
+    Price<int> temp2 = temp1;
+    temp2-=temp;
+    cout<<temp2<<std::endl;
+
+    cout<<temp1<<" + "<<temp <<" is : ";
+    temp2 = temp1;
+    temp2+=temp;
+    cout<<temp2<<std::endl;
+
+
+
+    Price< short > mySalary(120,35,3);
+    cout <<"mySalary : "<< mySalary<<std::endl;
+    Price< long > myOverdraft(99999,99,3);
+    cout<<"myOverdraft : "<< myOverdraft << std::endl;
+    Price<long> usaSelfDebt(145800000000000);
+    cout<< "usaSelfDebt : "<< usaSelfDebt << std::endl;
+    /*myOverdraft = mySalary;*/
+    myOverdraft = usaSelfDebt;
+
 }

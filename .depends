@@ -1,0 +1,2 @@
+main.o: main.cpp test.h
+test.o: test.cpp test.h fixed_point.h

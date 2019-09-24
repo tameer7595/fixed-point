@@ -13,4 +13,20 @@ fixed_point.h
 /home/tameer/CLionProjects/fixed_point/fixed_point.h
 iostream
 -
+fstream
+-
+math.h
+-
+stdio.h
+-
+iomanip
+-
+
+/home/tameer/CLionProjects/fixed_point/test.cpp
+test.h
+/home/tameer/CLionProjects/fixed_point/test.h
+fixed_point.h
+/home/tameer/CLionProjects/fixed_point/fixed_point.h
+
+/home/tameer/CLionProjects/fixed_point/test.h
 
