@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/tameer/CLionProjects/fixed_point/fixed_point.cpp
-fixed_point.h
-/home/tameer/CLionProjects/fixed_point/fixed_point.h
-
 /home/tameer/CLionProjects/fixed_point/fixed_point.h
 iostream
 -
