@@ -21,6 +21,10 @@ stdio.h
 -
 iomanip
 -
+limits.h
+-
+limits
+-
 
 /home/tameer/CLionProjects/fixed_point/test.cpp
 test.h

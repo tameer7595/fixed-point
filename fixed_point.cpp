@@ -14,7 +14,7 @@ unsigned int power_ten(unsigned int size){
     return res;
 }
 
-/*
+
 const std::string EMPTY = "";
 
 const std::string X[] = { EMPTY, "One ", "Two ", "Three ", "Four ", "Five ",
@@ -26,7 +26,7 @@ const std::string Y[] = { EMPTY, EMPTY, "Twenty ", "Thirty ", "Forty ", "Fifty "
                      "Sixty ", "Seventy ", "Eighty ", "Ninety " };
 
 // Function to convert single digit or two digit number into words
-std::string convert2digit(int n, std::string suffix)
+std::string convert2digit(unsigned  long int n, std::string suffix)
 {
     // if n is zero
     if (n == 0) {
@@ -70,5 +70,7 @@ std::string numberToWords(unsigned long int  n)
     // this handles digits at ten millions & hundred millions place
     res = convert2digit((n / 1000000000) % 100, "Billion, ") + res;
 
+
+
     return res;
-}*/
+}
