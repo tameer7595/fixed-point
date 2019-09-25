@@ -29,7 +29,7 @@ public:
 
     explicit Price(T dollar, unsigned int cent = 0, int size = 2);
 
-    double cast_to_double() const;
+    double cast_to_double() const;/*todo : must be explicit operator double()const*/
 
     Price<T> &operator=(T dollar);
 
@@ -78,6 +78,7 @@ public:
 
 
 private:
+    /*todo:change name*/
     T m_dollar;
     unsigned int m_cent;
     int m_size;
@@ -90,7 +91,7 @@ template<class T>
 inline Price<T> operator+(const Price<T> &t1, const Price<T> &t2) {
     Price<T> temp;
     unsigned int size = power_ten(t1.get_size());
-    temp.set_cent((unsigned int) (t2.get_cent() + t1.get_cent()));
+    temp.set_cent((t2.get_cent() + t1.get_cent()));
     if (temp.get_cent() > size*10) {
         temp.set_cent(temp.get_cent() % size);
         temp.set_dollar(t2.get_dollar() + t1.get_dollar() + 1);
@@ -102,34 +103,38 @@ inline Price<T> operator+(const Price<T> &t1, const Price<T> &t2) {
 template<class T>
 inline Price<T> operator-(const Price<T> &t1, const Price<T> &t2) {
     Price<T> tem;
-    double temp = t1.cast_to_double();
-    double temp1 = t2.cast_to_double();
-    temp1 -= temp;
-    tem.set_dollar(int(temp1 / 1.0));
-    tem.set_cent(int((temp1 - tem.get_dollar())*(power_ten(t1.get_size()))));
-
+    T temp = t1.get_dollar()*power_ten(t1.get_size()) + t1.get_cent();
+    T temp1 = t2.get_dollar()*power_ten(t2.get_size()) + t2.get_cent();
+    temp1-=temp;
+    tem.set_dollar(temp1/power_ten(t2.get_size()));
+    tem.set_cent(temp1%power_ten(t2.get_size()));
 
     return tem;
 }
 
 template<class T>
-Price<T> operator*(const Price<T> &obj, const Price<T> &other) {
+Price<T> operator*(const Price<T> &t1, const Price<T> &t2) {
     Price<T> temporary;
-    double temp = obj.cast_to_double();
-    double temp1 = other.cast_to_double();
-    temp *= temp1;
-    temporary.set_dollar((int) temp);/*temporary.m_dollar = (int)temp;*/
-    temporary.set_cent((int)((temp - temporary.get_dollar()) * power_ten(obj.get_size())));
+
+    T temp = t1.get_dollar()*power_ten(t1.get_size()) + t1.get_cent();
+    T temp1 = t2.get_dollar()*power_ten(t2.get_size()) + t2.get_cent();
+    temp1*=temp;
+
+    temporary.set_dollar(temp1/power_ten(t1.get_size()*2));
+    temporary.set_cent(temp1%power_ten(t1.get_size()*2));
+    temporary.set_cent(temporary.get_cent()/power_ten(t1.get_size()));
     return temporary;
+
 }
 
 template<class T>
-Price<T> operator/(const Price<T> &obj, const Price<T> &other) {
+Price<T> operator/(const Price<T> &t1, const Price<T> &t2) {
     Price<T> temporary;
-    double temp = obj.cast_to_double();
-    double temp1 = other.cast_to_double();
-    temp /= temp1;
-    temporary.set_dollar((int) temp);
+
+    T temp = t1.get_dollar()*power_ten(t1.get_size()) + t1.get_cent();
+    T temp1 = t2.get_dollar()*power_ten(t2.get_size()) + t2.get_cent();
+    temp/=temp1;
+    temporary.set_dollar(temp);
     temporary.set_cent(0);
     return temporary;
 }
@@ -149,7 +154,7 @@ Price<T> operator%(const Price<T> &obj, const Price<T> &other) {
     temporary.set_cent((int) ((temp - temporary.get_dollar()) * power_ten(obj.get_size())));
     return temporary;
 
-}
+}/*todo:refactoring*/
 
 template<class T>
 inline Price<T>::Price(T dollar, unsigned int cent, int size) : m_dollar(dollar), m_cent(cent), m_size(size) {
@@ -276,7 +281,7 @@ Price<T> &Price<T>::operator%=(const Price<T> &other) {
 
 template<class T>
 void Price<T>::operator++() {
-    this->m_dollar += 1;
+    this->m_dollar += 1; /* todo : use traits to prevent overflow*/
 }
 
 template<class T>

@@ -6,12 +6,12 @@
 #include "fixed_point.h"
 using std::cout;
 void Test ::test_fixed_point(){
-    Price<int>temp(4,5,2);
+    Price<int>temp(0,8557,4);
 
-    Price<int> temp1(3,25 , 2);
-/*    cout<<"sum of : "<< temp << " + " << temp1 << " is :";
+    Price<int> temp1(0,515 , 4);
+    cout<<"sum of : "<< temp << " + " << temp1 << " is :";
     temp = temp + temp1;
-    cout << temp << std::endl;*/
+    cout << temp << std::endl;
 
     if(temp == temp1)
         cout << temp<<" and " << temp1<<" are equals"<<std ::endl;
@@ -42,7 +42,7 @@ void Test ::test_fixed_point(){
     cout <<"mySalary : "<< mySalary<<std::endl;
     Price< long > myOverdraft(99999,99,3);
     cout<<"myOverdraft : "<< myOverdraft << std::endl;
-    cout << numberToWords((unsigned long int)myOverdraft.get_dollar())<<std::endl;
+    /*cout << numberToWords((unsigned long int)myOverdraft.get_dollar())<<std::endl;*/
 
     Price<long> usaSelfDebt(145800000000000);
     myOverdraft += usaSelfDebt;

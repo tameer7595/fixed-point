@@ -14,14 +14,13 @@
     <list default="true" id="21fae2d0-bd96-4668-af28-35ae14604e59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fixed_point.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fixed_point.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fixed_point.dir/fixed_point.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fixed_point.dir/fixed_point.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fixed_point.dir/test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fixed_point.dir/test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/fixed_point" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/fixed_point" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixed_point.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixed_point.h" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_point.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixed_point.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.o" beforeDir="false" afterPath="$PROJECT_DIR$/test.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.o" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569256967741</updated>
-      <workItem from="1569256971131" duration="42324000" />
+      <workItem from="1569256971131" duration="51006000" />
     </task>
     <servers />
   </component>
@@ -96,13 +95,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/fixed_point.h</url>
-          <line>238</line>
+          <line>243</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/test.cpp</url>
-          <line>11</line>
-          <option name="timeStamp" value="31" />
+          <line>32</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
